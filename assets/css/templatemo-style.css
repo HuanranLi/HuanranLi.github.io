@@ -225,7 +225,7 @@ html {
   -webkit-overflow-scrolling: touch;
   background-color: #a43f49;
   box-sizing: border-box;
-  height: 100vh;  
+  height: 100vh;
   max-height: 100vh !important;
   max-width: 80vw !important;
   min-width: 45px !important;
@@ -234,7 +234,7 @@ html {
   overflow-y: auto !important;
   padding: 0;
   position: fixed !important;
-  top: calc(0px);  
+  top: calc(0px);
   width: 20%;
   will-change: transform;
   z-index: 9999 !important;
@@ -369,22 +369,41 @@ button:hover {
     border-top: 2px solid rgba(250, 250, 250, 0.1);
 }
 
+.first-image-post {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.second-image-post {
+  margin-top: 60px;
+    padding-top: 60px;
+    border-top: 2px solid rgba(250, 250, 250, 0.1);
+}
+
 .left-image img,
+.second-image-post img,
+.first-image-post img,
 .right-image img {
     border-radius: 5px;
 }
 
 .right-image-post h4,
+.first-image-post h4,
+.second-image-post h4,
 .left-image-post h4 {
     margin-top: 30px;
 }
 
 .right-image-post p,
+.second-image-post p,
+.first-image-post p,
 .left-image-post p {
     margin-top: 20px;
 }
 
 .right-image-post .white-button,
+.second-image-post .white-button,
+.first-image-post .white-button,
 .left-image-post .white-button {
     margin-top: 30px;
 }
@@ -690,7 +709,7 @@ section.contact-me {
     }
 }
 
-@media screen and (max-width: 1680px) and (min-width: 846px) { 
+@media screen and (max-width: 1680px) and (min-width: 846px) {
     .menu .social-network ul li a {
         width: 36px;
         height: 36px;
@@ -742,15 +761,15 @@ section.contact-me {
 #menu-toggle,
 #menu-close {
     display: none;
-}  
+}
 
-@media screen and (max-width: 845px) {        
+@media screen and (max-width: 845px) {
     #menu-toggle,
     #menu-close {
         display: inline-block;
-    }    
+    }
 
-    .menu {        
+    .menu {
         width: 320px;
         -webkit-transform: translateX(-100%) !important;
         transform: translateX(-100%) !important;
@@ -760,7 +779,7 @@ section.contact-me {
     }
 
     .menu .image {
-        margin-top: 40px;        
+        margin-top: 40px;
     }
 
     .menu .image img {
