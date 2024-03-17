@@ -1,545 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huanran Li's Personal Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        header { background: #333; color: white; padding-top: 30px; min-height: 70px; border-bottom: white 3px solid; }
+        header a { color: #fff; text-decoration: none; text-transform: uppercase; font-size: 16px; }
+        nav { float: right; margin-top: 10px; }
+        nav a { margin-left: 20px; }
+        footer { padding: 20px; margin-top: 20px; color: #ffffff; background-color: #333; text-align: center; }
 
-    <title>Huanran Li's Website</title>
-<!--
-Reflux Template
-https://templatemo.com/tm-531-reflux
--->
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        #about .about-content {
+            display: flex;
+            align-items: center;
+        }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
-    <link rel="stylesheet" href="assets/css/owl.css" />
-    <link rel="stylesheet" href="assets/css/lightbox.css" />
-  </head>
+        #about .about-text {
+            flex: 3; /* Text takes up two-thirds of the width */
+            padding-right: 20px; /* Adjust this value as needed for separation */
+        }
 
-  <body>
-    <div id="page-wraper">
-      <!-- Sidebar Menu -->
-      <div class="responsive-nav">
-        <i class="fa fa-bars" id="menu-toggle"></i>
-        <div id="menu" class="menu">
-          <i class="fa fa-times" id="menu-close"></i>
-          <div class="container">
-            <div class="image">
-              <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
-            </div>
-            <div class="author-content">
-              <h4>Huanran Li</h4>
-              <span>Electrical Engineering Ph.D. Student<br>University of Wisconsin-Madison</span>
-            </div>
-            <nav class="main-nav" role="navigation">
-              <ul class="main-menu">
-                <li><a href="#section1">About Me</a></li>
-                <li><a href="#section1.5">Awards</a></li>
-                <li><a href="#section2">Papers/Codes</a></li>
-                <li><a href="#section3">TA Courses</a></li>
-                <li><a href="#section4">Hobbies</a></li>
-                <li><a href="#section5">Contact Me</a></li>
-              </ul>
+        #about .about-image {
+            flex: 1; /* Image takes up one-third of the width */
+            padding-left: 20px; /* Adjust this value as needed for separation */
+        }
+
+        #about .about-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .list-entry img {
+            max-width: 100%; /* Ensure image fits within the entry */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .list-entry {
+            border-left: 4px solid #4CAF50; /* Adjust the color as needed */
+            background-color: #AFD3FF; /* Lighter background color */
+            padding: 10px;
+            margin-bottom: 10px;
+            list-style-type: none; /* Remove default list bullets */
+        }
+
+        .education-section {
+            border-left: 4px solid #4E9EFF; /* Deep Sky Blue */
+            background-color: #E5EFF9; /* Lighter shade of blue for background */
+            padding: 10px;
+            margin-bottom: 10px;
+            list-style-type: none; /* Remove default list bullets */
+        }
+
+        .awards-section {
+            border-left: 4px solid #4CAF50; /* Forest Green */
+            background-color: #e8f5e9; /* Lighter shade of green for background */
+            padding: 10px;
+            margin-bottom: 10px;
+            list-style-type: none; /* Remove default list bullets */
+        }
+
+        .experience-section {
+            border-left: 4px solid #767676; /* Slate Gray */
+            background-color: #E8E8E8; /* Lighter shade of gray for background */
+            padding: 10px;
+            margin-bottom: 10px;
+            list-style-type: none; /* Remove default list bullets */
+        }
+
+        .publications-section {
+            border-left: 4px solid #BA55D3; /* Medium Orchid */
+            background-color: #E6E6FA; /* Lavender for background */
+            padding: 10px;
+            margin-bottom: 10px;
+            list-style-type: none; /* Remove default list bullets */
+        }
+
+        .projects-section {
+            border-left: 4px solid #FF6347; /* Tomato */
+            background-color: #FFE4E1; /* Misty Rose for background */
+            padding: 10px;
+            margin-bottom: 10px;
+            list-style-type: none; /* Remove default list bullets */
+        }
+
+
+        .skills-section {
+            border-left: 4px solid #DAA520; /* Goldenrod */
+            background-color: #F4F4E8; /* Light Goldenrod Yellow for background */
+            padding: 10px;
+            margin-bottom: 10px;
+            list-style-type: none; /* Remove default list bullets */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Huanran Li</h1>
+            <nav>
+                <a href="#about">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#awards">Awards</a>
+                <a href="#experience">Experience</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </nav>
-            <div class="social-network">
-              <ul class="soial-icons">
-                <li>
-                  <a href="https://twitter.com/HuanranLi4"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/huanran-li-870954163"
-                    ><i class="fa fa-linkedin"></i></a>
-                </li>
-
-              </ul>
-            </div>
-            <div class="copyright-text">
-              <p>Copyright 2019 Reflux Design</p>
-            </div>
-          </div>
         </div>
+    </header>
+
+    <div class="container">
+      <section id="about">
+        <h2>About Me</h2>
+  <div class="about-container" style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="about-text">
+
+          <p>I am Huanran Li, a Ph.D. candidate in Electrical Engineering at the University of Wisconsin-Madison, advised by Professor <a href="https://danielpimentel.github.io/index.html" target="_blank">Daniel Pimentel-Alarcón</a>. My research journey in machine learning has been diverse and dynamic, initially focusing on general machine learning with a deep dive into subspace clustering, visualization, and high-rank matrix completion. This work has been recognized through prestigious awards like the best student paper at
+            <a href="https://ivapp.scitevents.org/?y=2023" target="_blank">IVAPP 2023</a>
+            and the Outstanding Poster Award at
+            <a href="https://midwest-ml.org/2023/" target="_blank">MMLS 2023</a>
+            .</p>
+          <p>More recently, my focus has shifted toward deep learning, particularly in the areas of Contrastive Learning (CL) and Large Language Models (LLMs). In this pursuit, I have developed an innovative model that integrates self-attention mechanisms into the contrastive learning framework. This work demonstrates not only practical advancements but also significantly contributes to the theoretical understanding of how augmentation scale impacts learning outcomes in contrastive learning. As I move forward, my aim is to deepen my exploration in this area for my Ph.D. final thesis, primarily focusing on Contrastive Learning, Neural Collapse, and Transformers.</p>
       </div>
-
-      <section class="section about-me" data-section="section1">
-        <div class="container">
-          <div class="section-heading">
-            <h2>About Me</h2>
-            <div class="line-dec"></div>
-            <div align = "left">
-            <p><br><b><u>Education</u></b></br>I am currently in pursuit of Electrical and Computer Engineering (ECE)
-              Ph.D. degree advised by Professor <a href="https://danielpimentel.github.io/index.html">Daniel Pimentel-Alarc&oacute;n</a> at University of Wisconsin-Madison.
-              Before that, I graduated in both Electrical Engineering and Computer Science B.S. at University of Wisconsin-Madison in 2020 Summer.
-            </p>
-
-            <p><br><b><u>Research Interests</u></b></br>My interests mostly lie in machine learning, signal processing, deep learning, and optimization.
-              For the past few years, I have done projects about subspace clustering, subspace visualization, sequence reconstruction, and sparse penalty learning.
-              Right now, I am working on research topics closely related to low-rank subspaces, missing data, and Neural Network reasoning.
-            </p>
-            </div>
-          </div>
-
+      <div class="about-image">
+            <img src="assets/images/me1.jpg" alt="About Me Image" style="width: 100%;">
         </div>
-      </section>
+  </div>
+</section>
 
-      <section class="section awards" data-section="section1.5">
-        <div class="container">
-          <div class="section-heading">
+        <hr>
+        <section id="education">
+        <h2>Education</h2>
+        <ul class="no-bullets">
+            <li class="education-section">
+                <h3>Ph.D. in Electrical Engineering and Computer Science</h3>
+                <p>
+                   <strong>Institution:</strong> University of Wisconsin-Madison<br>
+                   <strong>GPA:</strong> 3.908/4.0<br>
+                   <strong>Expected Graduation:</strong> May 2025</p>
+            </li>
+            <li class="education-section">
+                <h3>B.S. in Electrical Engineering and Computer Science (Honor)</h3>
+                <p><strong>Institution:</strong> University of Wisconsin-Madison<br>
+                   <strong>GPA:</strong> 3.90/4.0<br>
+                   <strong>Graduation Date:</strong> May 2020</p>
+            </li>
+        </ul>
+
+    </section>
+        <hr>
+        <section id="awards">
             <h2>Awards</h2>
-            <div class="line-dec"></div>
-          </div>
-
-
-
-          <div class="first-image-post">
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="right-text">
-                  <h4>IVAPP 2023 Best Student Paper Award & MMLS 2023 Best Poster Award</h4>
-                  <p> The paper <u>Visualizing Grassmannians via Poincare Embeddings</u> by H. Li, and D. Pimentel-Alarc&oacute;n was awarded The Best Student Paper Award for
-                    14th International Conference on Information Visualization Theory and Applications (IVAPP 2023).
-                    This paper introduces an embedding to visualize high-dimensional Grassmannians on the Poincaré disk, obtained by minimizing the KL-divergence of the geodesics on each manifold.
-                    Its main theoretical result bounds the loss of our embedding by a log-factor of the number of subspaces, and a term that depends on the distribution of the subspaces in the Grassmannian.
-                    It provides both synthetic and real data experiments showing that the embedding can provide a more accurate visualization of Grassmannians than existing representations.
-                  </p>
-                  <div class="white-button">
-                    <a href="https://ivapp.scitevents.org/PreviousAwards.aspx">Read More</a>
+            <ul>
+              <div class="awards-section">
+                <h3>
+                    <li>Best Student Paper Award:</li>
+                    <span style="color: #555; font-size: 0.8em;">
+                        <a href="https://ivapp.scitevents.org/?y=2023" target="_blank" style="color: inherit; text-decoration: underline;">International Conference on Information Visualization Theory and Applications 2023</a>
+                    </span>
+                    <br>
+                    <li>Best Poster Award:</li>
+                    <span style="color: #555; font-size: 0.8em;">
+                        <a href="https://midwest-ml.org/2023/" target="_blank" style="color: inherit; text-decoration: underline;">Midwest Machine Learning Symposium 2023</a>
+                    </span>
+                </h3>
+                    <div class="award-content">
+                      <img src="assets/images/GrassCare_Overview.png" alt="Award Image" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                        <p>The paper,
+                          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Jwt-ofkAAAAJ&citation_for_view=Jwt-ofkAAAAJ:_FxGoFyzp5QC" target="_blank">
+                            <em>Visualizing Grassmannians via Poincare Embeddings</em></a>,
+                            introduces an embedding to visualize high-dimensional Grassmannians on the Poincaré disk,
+                         obtained by minimizing the KL-divergence of the geodesics on each manifold.
+                         Its main theoretical result bounds the loss of our embedding by a log-factor of the number of subspaces,
+                         and a term that depends on the distribution of the subspaces in the Grassmannian.
+                         It provides both synthetic and real data experiments showing that the embedding
+                         can provide a more accurate visualization of Grassmannians than existing representations.</p>
                   </div>
-                </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="left-image">
-                  <img src="assets/images/Optimization Process.gif" alt="" />
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-
-
-          <div class="second-image-post">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="left-image">
-                  <img src="assets/images/EnerH.jpeg" alt="" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right-text">
-                  <h4>EnerHack 2018 1st Place</h4>
-                  <p> Winner of Faith Technologies Social Impact Prize.
-                    Implemented on Amazon Web Services(AWS) in Python,
-                    it helps save energy daily wasted at home by monitoring and
-                    controlling the electrical devices, sending warning for potential energy wasting activities,
-                     asking permission to shut down the light, and reporting the energy usage.
-
-                  </p>
-                  <div class="white-button">
-                    <a href="https://energyan.net/hackathon/people.html">Read More</a>
+              <div class="awards-section">
+                  <h3>
+                      <li>First Place of Faith Technologies Social Impact Prize</li>
+                      <span style="color: #555; font-size: 0.8em;">
+                        <a href="https://engineering.wisc.edu/news/student-energy-hackathon-yields-smart-real-life-solutions/"  target="_blank" style="color: inherit; text-decoration: underline;">EnerHack 2018 - Energy Home Assistant</a>
+                      </span>
+                  </h3>
+                  <div class="award-content">
+                      <img src="assets/images/EnerH.jpeg" alt="EnerHack 2018 Award Image" style="max-width: 75%; height: auto; display: block; margin: 0 auto;">
+                      <p>
+                        Developed with Python on Amazon Web Services (AWS),
+                        this innovative project plays a pivotal role in home energy conservation.
+                        It features an advanced server system designed to facilitate communication
+                        between an energy station and various electrical devices.
+                        The server processes tasks on the cloud, responding efficiently
+                        to human voice inputs via Echo. This system not only monitors
+                        and controls household electrical devices but also proactively
+                        issues warnings about potential energy wastage.
+                        It incorporates user-centric features such as seeking permission
+                        for turning off lights and providing detailed reports on energy usage,
+                        thereby promoting sustainable living practices.
+                    </p>
                   </div>
-                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="right-image-post">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="left-text">
-                  <h4>MadHacks 2018 2nd Prize</h4>
-                  <p>
-                    Powered by Diagflow and Google Assistant, Voicoder takes your voice instructions and
-                    simulates them like running lines of executable code. It was designed mainly for 2 reasons.
-                    First, people with typing disabilities could code with voice interactions. Second,
-                    It would be more intereting and attractive for children to learn basic coding by
-                    talking to the Google Assistant.
-                  </p>
-                  <div class="white-button">
-                    <a href="https://devpost.com/software/voicoder">Read More</a>
+              <div class="awards-section">
+                  <h3>
+                      <li>Second Place in Hackathon</li>
+                      <span style="color: #555; font-size: 0.8em;">
+                        <a href="https://devpost.com/software/voicoder"  target="_blank" style="color: inherit; text-decoration: underline;">MadHacks 2018 - Voicoder, Code with Voice</a>
+                      </span>
+                  </h3>
+                  <div class="award-content">
+                    <div class="image-container" style="display: flex; justify-content: center; align-items: center;center; margin: 5px;"">
+                      <img src="assets/images/voicoder_1.png" alt="Voicoder 1" style="max-width: 25%; height: auto; margin: 3px;">
+                      <img src="assets/images/voicoder_2.png" alt="Voicoder 2" style="max-width: 25%; height: auto; margin: 3px;">
+                      <img src="assets/images/left-image.jpg" alt="Madhacks Award" style="max-width: 50%; height: auto; margin: 3px;">
+                    </div>
+                    <p>
+                          Voicoder, powered by Dialogflow and Google Assistant, revolutionizes code interaction by transforming voice instructions into executable code simulations. This innovative tool, developed in JavaScript, is adept at interpreting commands from Google Assistant, constructing code that encompasses loops, conditional statements, print operations, general mathematics, and array manipulations.
+                          </p><p>
+                          Voicoder was conceived with dual objectives: firstly, to empower individuals with typing disabilities by enabling voice-based coding, and secondly, to make learning programming more engaging and accessible for children. By verbally interacting with the Google Assistant, users can perform complex coding operations, and the system further enhances the learning experience by vocalizing the outcomes with a machine-generated voice.
+                      </p>
                   </div>
-                </div>
               </div>
-              <div class="col-md-6">
-                <div class="right-image">
-                  <img src="assets/images/left-image.jpg" alt="" />
-                </div>
+
+              <div class="awards-section">
+                  <h3>
+                      <li>Diversity Prize in Hackathon</li>
+                      <span style="color: #555; font-size: 0.8em;">
+                        MadHacks 2017
+                        </span>
+                  </h3>
               </div>
+
+              <div class="awards-section">
+                <h3>
+                    <li>Gerald Holdridge TA Teaching Excellence Award</li>
+                    <span style="color: #555; font-size: 0.8em;">
+                      <a href="https://engineering.wisc.edu/blog/2023-ece-department-awards-reception-highlights-excellence/"  target="_blank" style="color: inherit; text-decoration: underline;">Department of Electrical and Computer Engineering</a>, UW-Madison 2023
+                    </span>
+                </h3>
+              </div>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <ul class="no-bullets">
+                <li class="experience-section">
+                    <h3>Graduate Research Assistant at UW-Madison</h3>
+                    <p><strong>Duration:</strong> Jan 2021 - Present<br>
+                       <strong>Key Areas:</strong> Deep learning, subspace clustering, missing data handling, dimensionality reduction<br>
+                       <strong>Key Responsibilities:</strong> Conducting comprehensive literature
+                       reviews and analysis in key areas.
+                       Designing and executing experiments to evaluate machine learning models,
+                       deriving theoretical insights and results for successful models,
+                       and authoring high-quality research papers for conferences.</p>
+                </li>
+                <!-- Additional experience entries can be added here in the same format -->
+            </ul>
+        </section>
+
+
+        <hr>
+        <section id="publications">
+    <h2>Publications</h2>
+    <ul class="no-bullets">
+      <li class="publications-section">
+          <h3>Visualizing Grassmannians via Poincare Embeddings <br>
+          <span style="color: #555; font-size: 0.8em;">
+            H Li, D Pimentel-Alarcón
+            </span></h3>
+          <div class="publication-details">
+              <strong>Publications:</strong>
+              <ul>
+                  <li><strong>Conference:</strong> Information Visualization Theory and Application (IVAPP2023)</li>
+                  <li><strong>Journal:</strong> SN Computer Science</li>
+                  <li><strong>Poster:</strong> Midwest Machine Learning Symposium (MMLS2023)</li>
+              </ul>
+          </div>
+          <div class="publication-description">
+              <p>
+                  <strong>Abstract:</strong> This paper presents a novel method to visualize high-dimensional Grassmannians on the Poincaré disk. The technique optimizes the representation of the Grassmannian geometry by minimizing KL-divergence in the construction of affinity matrices. A significant theoretical contribution includes bounding the embedding loss, offering insights into the structure of subspaces. Our experimental results validate the method's effectiveness in providing more accurate visualizations of Grassmannians than traditional approaches.
+              </p>
+              <p>
+                  <strong>Keywords:</strong> Grassmannian, Manifold Learning, Poincaré Disk, t-SNE, High-Dimensional Data, Dimensionality Reduction
+              </p>
+          </div>
+          <div class="publication-links">
+            <p>
+                <strong>Links:</strong>
+                  <a href="https://www.scitepress.org/Papers/2023/116094/116094.pdf" target="_blank">Conference Paper</a>,
+                  <a href="https://link.springer.com/article/10.1007/s42979-023-02597-0" target="_blank">Journal Paper</a>,
+                  <a href="GrassCare_2023_MMLS.pdf" target="_blank">Poster</a>,
+                  <a href="https://github.com/HuanranLi/GrassCare-Plot" target="_blank">Code</a>
+            </p>
+          </div>
+
+      </li>
+
+
+        <li class="publications-section">
+            <h3>Minimum-Length Trace Reconstruction via Integer Programming <br>
+              <span style="color: #555; font-size: 0.8em;">
+              H Li, D Pimentel-Alarcón
+              </span></h3>
+
+            <div class="publication-details">
+                <strong>Publications:</strong>
+                <ul>
+                    <li><strong>Conference:</strong> Allerton Conference 2022<br></li>
+                </ul>
             </div>
-          </div>
+            <div class="publication-description">
+                <p>
+                  <strong>Abstract:</strong> This paper offers a novel Integer Programming approach to the trace-reconstruction problem, focusing on efficiently identifying the shortest sequence that aligns with independently sampled subsequences. We enhanced optimization through valid inequalities and demonstrated significant speed and efficiency improvements over traditional depth-first search methods in our experiments.
+                </p>
+                <p>
+                    <strong>Keywords:</strong> Integer Programming, Trace Reconstruction, Algorithm Efficiency, Optimization, Subsequence Sampling, Sequence Analysis
+                </p>
+            </div>
+            <div class="publication-links">
+              <p>
+                  <strong>Links:</strong>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Jwt-ofkAAAAJ&citation_for_view=Jwt-ofkAAAAJ:WF5omc3nYNoC" target="_blank">Conference Paper</a>,
+                    <a href="https://github.com/HuanranLi/Trace-Reconstruction" target="_blank">Code</a>
+              </p>
+            </div>
+        </li>
 
-        </div>
-      </section>
-
-      <section class="section papers-codes" data-section="section2">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Papers/Codes</h2>
-            <div class="line-dec"></div>
-          </div>
-
-          <div align = "left">
-                <p> <b> &centerdot;&emsp; Visualizing Grassmannians via Poincare Embeddings</b> <br>
-                  &emsp;&emsp;H. Li, D. Pimentel-Alarcón <br>
-                  &emsp;&emsp;18th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (IVAPP 2023).
-                  &emsp;&emsp;<a href="https://github.com/HuanranLi/GrassCare-Plot/blob/main/IVAPP_2023_2_CR.pdf">Paper</a>&emsp;-
-                  &emsp;<a href="https://github.com/HuanranLi/GrassCare-Plot/blob/main/GrassCare%20Presentation%20(1).pdf">Presentation Slides</a>&emsp;-
-                  &emsp;<a href="https://github.com/HuanranLi/GrassCare-Plot">Python Code</a>&emsp;-
-                  &emsp;<a href="https://github.com/HuanranLi/GrassCare-Plot/blob/main/GrassCare_2023_MMLS.pdf">Poster</a>
-
-
-               </p>
-
-			         <p> <b> &centerdot;&emsp; Minimum-Length Trace Reconstruction via Integer Programming</b> <br>
-                 &emsp;&emsp;H. Li, D. Pimentel-Alarcón <br>
-                 &emsp;&emsp;58th Annual Allerton Conference on Communication, Control, and Computing (Allerton 2022).<br>
-                 &emsp;&emsp;<a href="https://ieeexplore.ieee.org/abstract/document/9929360">Paper</a>&emsp;-
-                 &emsp;<a href="https://github.com/HuanranLi/Trace-Reconstruction/blob/main/TraceReconstruction-AllertonTalk.pdf">Presentation Slides</a>&emsp;-
-                 &emsp;<a href="https://github.com/HuanranLi/Trace-Reconstruction">Python Code</a>
-
+        <li class="publications-section">
+            <h3>Fusion over the Grassmann Manifold for Incomplete-Data Clustering<br>
+            <span style="color: #555; font-size: 0.8em;">
+            JS Johnson, H Li, C Gan, Z Lu, M Malloy, DL Pimentel-Alarcón
+            </span></h3>
+            <div class="publication-details">
+                <strong>Publications:</strong> Currently under reviewing process
+            </div>
+            <div class="publication-description">
+            <p>
+                <strong>Abstract:</strong> This paper introduces a novel approach for clustering incomplete vectors by using subspaces within the Grassmannian geometry. Our algorithm clusters and completes data in a union of subspaces without needing prior knowledge of subspace numbers. It efficiently handles noise and requires only an upper bound on subspace dimensions. The paper also covers practical aspects like model selection and sketching techniques, supported by synthetic and real-data experiments to validate the approach.
+              </p>
+              <p>
+              <strong>Keywords:</strong> Grassmann Manifold, Incomplete-Data Clustering, Subspace Clustering, Data Completion, Noise Handling, Dimensionality Analysis, Model Selection, Algorithmic Convergence
               </p>
 
-              <p> <b> &centerdot;&emsp; Space Upper Bounds for Directed Graph Connectivity</b> <br>
-                &emsp;&emsp;H. Li<br>
-                &emsp;&emsp;Undergrad Honor Thesis, 2020. <br>
-                &emsp;&emsp;<a href="assets/images/HT.pdf">Paper</a>
-             </p>
-
-
-          </div>
-
-
-
-
-
-
-        </div>
-      </section>
-
-      <section class="section ta-courses" data-section="section3">
-        <div class="container">
-          <div class="section-heading">
-            <h2>TA Courses</h2>
-            <div class="line-dec"></div>
             </div>
 
-          <div align = "left">
-          <p><b><u>2021Fall:</u></b>&emsp;CS/ECE561 Probability and Information Theory in Machine Learning
-          </p>
-          <p><b><u>2022Spring:</u></b> &emsp;CS/ECE532 Matrix Method in Machine Learning
-          </p>
-          <p><b><u>2022Summer:</u></b> &emsp;CS/ECE532 Matrix Method in Machine Learning
-          </p>
-          <p><b><u>2022Fall:</u></b>&emsp; CS/ECE532 Matrix Method in Machine Learning
-          </p>
-          <p><b><u>2023Spring:</u></b>&emsp; CS/ECE532 Matrix Method in Machine Learning
-          </p>
+            <div class="publication-links">
+              <p>
+                  <strong>Links:</strong>
+                    <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Jwt-ofkAAAAJ&citation_for_view=Jwt-ofkAAAAJ:ufrVoPGSRksC" target="_blank">Paper</a>
+              </p>
+            </div>
+        </li>
+        <li class="publications-section">
+            <h3>TransFusion: Analytical Contrastive Learning with Transformer<br>
+              <span style="color: #555; font-size: 0.8em;">
+              H Li, D Pimentel-Alarcón
+              </span></h3>
+              <div class="publication-details">
+                  <strong>Publications:</strong> Currently under reviewing process
+              </div>
+            <div class="publication-description">
+            <p>
+                <strong>Abstract:</strong> TransFusion introduces a transformative approach to contrastive learning, reimagining attention mechanisms for deeper analytical insights and heightened explainability. By redefining conventional components within the learning process, it strategically aligns the model's output with class-specific affinities, pioneering a path to a more nuanced understanding of augmentation limits and batch size requirements. This framework paves the way for superior feature discernment, crucially enhancing data clustering and classification outcomes in complex scenarios.
+                            </p>
+              <p>
+                <strong>Keywords:</strong> Contrastive Learning, Transformer, Jensen-Shannon Divergence, Data Augmentation, Feature Extraction, Cluster Analysis
+                </p>
+            </div>
 
-          </div>
+        </li>
+        <li class="publications-section">
+            <h3>Stable Contrastive Learning with Orthonormal Anchors Regression<br>
+              <span style="color: #555; font-size: 0.8em;">
+              H Li, D Pimentel-Alarcón
+              </span></h3>
+              <div class="publication-details">
+                  <strong>Publications:</strong> Currently under reviewing process
+              </div>
+              <div class="publication-description">
+                <p>
+                    <strong>Abstract:</strong> This study unveils the 'over-fusion' phenomenon in contrastive learning, where embeddings tend to converge detrimentally, impacting classification accuracy. Focusing on the InfoNCE loss function, we propose the Orthonormal Anchor Regression Loss (OAR) as a novel solution. OAR effectively disentangles embedding clusters, fostering distinctiveness and dense cluster aggregation. Demonstrating significant improvements with minimal labeling, our method shines in enhancing classification on CIFAR10 and CIFAR100 datasets, challenging conventional approaches in the field.
+                </p>
+                <p>
+                    <strong>Keywords:</strong> Contrastive Learning, InfoNCE Loss, Embedding Clusters,  Semi-Supervised Learning
+                </p>
+            </div>
 
-        </div>
-      </section>
+        </li>
 
-      <section class="section hobbies" data-section="section4">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Hobbies</h2>
-            <div class="line-dec"></div>
-            <span>
-              I like traveling, photography, and any sport that is exciting.
-              </span>
-          </div>
-          <div class="row">
-            <div class="isotope-wrapper">
-              <form class="isotope-toolbar">
-                <label
-                  ><input
-                    type="radio"
-                    data-type="*"
-                    checked=""
-                    name="isotope-filter"
-                  />
-                  <span>all</span></label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    data-type="photography"
-                    name="isotope-filter"
-                  />
-                  <span>Photography</span></label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    data-type="bouldering"
-                    name="isotope-filter"
-                  />
-                  <span>Bouldering</span></label
-                >
+        <li class="publications-section">
+            <h3>Group-Sparse Regularization via Elastic Stars<br>
+              <span style="color: #555; font-size: 0.8em;">
+              H Li, D Pimentel-Alarcón
+              </span></h3>
+              <div class="publication-details">
+                  <strong>Publications:</strong> Currently under reviewing process
+              </div>
+              <div class="publication-description">
+                <p>
+                    <strong>Abstract:</strong> This paper tackles the over-sparsification issue in Sparse Subspace Clustering (SSC), pivotal in high-dimensional data analysis. We introduce 'Elastic Stars' (ES), a novel sparsity regularization approach, blending sparsity with connectivity in clusters. ES ensures balanced representation by minimizing the distance between variables and evolving centroids, including a zero centroid. Additionally, we incorporate an L2 norm penalty to reduce noise and outliers. Despite the challenges posed by its non-convexity, we present an effective ADMM-based optimization tailored for SSC with ES, yielding significant improvements in clustering accuracy over existing methods.
+                </p>
+                <p>
+                    <strong>Keywords:</strong> Sparse Subspace Clustering, Group-Sparse Regularization, High-Dimensional Data, L1-Norm Penalty, L2-Norm Penalty, ADMM Optimization, Clustering
+                </p>
+            </div>
 
-              </form>
-              <div class="isotope-box">
-                <div class="isotope-item" data-type="photography">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/terres.jpeg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/terres.jpeg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Wisconsin</h4>
-                      <span>Madison</span>
-                    </figcaption>
-                  </figure>
-                </div>
+        </li>
 
-                  <div class="isotope-item" data-type="photography">
-                    <figure class="snip1321">
-                      <img
-                        src="assets/images/Mad2.jpeg"
-                        alt="sq-sample26"
-                      />
-                      <figcaption>
-                        <a
-                          href="assets/images/Mad2.jpeg"
-                          data-lightbox="image-1"
-                          data-title="Caption"
-                          ><i class="fa fa-search"></i
-                        ></a>
-                        <h4>Wisconsin</h4>
-                        <span>Madison</span>
-                      </figcaption>
-                    </figure>
+    </ul>
+</section>
+
+
+        <hr>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul class="no-bullets">
+            <ul class="projects-section">
+                <li class="project-section">
+                    <h3>Movie Rating Prediction Based on Matrix Completion<br>
+                    <span style="color: #555; font-size: 0.8em;">
+                      Machine Learning Honor Project, 2019
+                      </span></h3>
+
+                      <div class="project-content">
+                          <p>
+                              <strong>Description:</strong> This project entailed training machine learning
+                              models on a dataset comprising over 20 million movie ratings
+                              and tagging activities dating back to 1995.
+                              The methods implemented encompass a range of advanced techniques,
+                              including Singular Value Decomposition (SVD),
+                              Principal Component Analysis (PCA),
+                              and various regression models such as Least Square,
+                              Gaussian Kernel, and Ridge Regression.
+                              Additionally, we integrated Truncated SVD Regularization
+                              to enhance the model's prediction accuracy and robustness,
+                              aiming to refine the algorithm's effectiveness in dealing
+                              with large-scale movie rating data.
+                          </p>
+                      </div>
+
+                      <div class="project-links">
+                        <p>
+                            <strong>Links:</strong>
+                              <a href="https://github.com/HuanranLi/Projects/blob/master/MovieRatingPrediction.ipynb" target="_blank">Report & Code</a>
+                        </p>
+                      </div>
+
+                </li>
+                </ul>
+
+                <ul class="projects-section">
+                <li class="project-section">
+                    <h3>UPDATO - UAV Package Delivery And Trajectory Optimization<br>
+                    <span style="color: #555; font-size: 0.8em;">
+                    Electrical Engineering Capstone Design, 2018</span></h3>
+
+
+                    <div class="project-content">
+                      <img src="assets/images/updato.png" alt="Updato UAV path figure" style="max-width: 75%; height: auto; display: block; margin: 0 auto;">
+
+                      <p>
+                            <strong>Description:</strong>The UPDATO project concentrated on enhancing the
+                            routing efficiency of Unmanned Aerial Vehicles (UAVs) for package delivery,
+                            with an emphasis on optimizing routes to multiple locations while carefully
+                            considering both energy and time costs.
+                            Our approach involved developing versatile models capable
+                            of optimizing UAV routing based on various factors such as time, energy,
+                            or a balanced consideration of both. These models were adept at factoring
+                            in environmental variables like wind conditions and terrain elevation to
+                            further refine their effectiveness. To accomplish this, we implemented a
+                            sophisticated Feedback Control System and applied solutions to the Traveling
+                            Salesman Problem. The project's technical backbone was established through
+                            programming in Julia, complemented by the use of Gurobi for model solving,
+                            thereby crafting a more efficient and responsive UAV delivery system.
+                        </p>
+                    </div>
+
+
+                    <div class="project-links">
+                      <p>
+                          <strong>Links:</strong>
+                            <a href="https://github.com/HuanranLi/Projects/blob/master/Updato.ipynb" target="_blank">Report & Code</a>
+                      </p>
+                    </div>
+
+                </li>
+              </ul>
+
+              <div class="projects-section">
+                  <h3>
+                      <li>Energy Home Assistant</li>
+                      <span style="color: #555; font-size: 0.8em;">
+                        <a href="https://engineering.wisc.edu/news/student-energy-hackathon-yields-smart-real-life-solutions/"  target="_blank" style="color: inherit; text-decoration: underline;">EnerHack 2018</a>
+                      </span>
+                  </h3>
+                  <div class="projects-content">
+                      <p>
+                        Developed with Python on Amazon Web Services (AWS),
+                        this innovative project plays a pivotal role in home energy conservation.
+                        It features an advanced server system designed to facilitate communication
+                        between an energy station and various electrical devices.
+                        The server processes tasks on the cloud, responding efficiently
+                        to human voice inputs via Echo. This system not only monitors
+                        and controls household electrical devices but also proactively
+                        issues warnings about potential energy wastage.
+                        It incorporates user-centric features such as seeking permission
+                        for turning off lights and providing detailed reports on energy usage,
+                        thereby promoting sustainable living practices.
+                    </p>
+                  </div>
+              </div>
+
+              <div class="projects-section">
+                  <h3>
+                      <li>Voicoder - Code with Voice</li>
+                      <span style="color: #555; font-size: 0.8em;">
+                        <a href="https://devpost.com/software/voicoder"  target="_blank" style="color: inherit; text-decoration: underline;">MadHacks 2018</a>
+                      </span>
+                  </h3>
+                  <div class="projects-content">
+                    <div class="image-container" style="display: flex; justify-content: center; align-items: center;center; margin: 5px;"">
+                      <img src="assets/images/voicoder_1.png" alt="Voicoder 1" style="max-width: 40%; height: auto; margin: 3px;">
+                      <img src="assets/images/voicoder_2.png" alt="Voicoder 2" style="max-width: 40%; height: auto; margin: 3px;">
+                    </div>
+                    <p>
+                          Voicoder, powered by Dialogflow and Google Assistant, revolutionizes code interaction by transforming voice instructions into executable code simulations. This innovative tool, developed in JavaScript, is adept at interpreting commands from Google Assistant, constructing code that encompasses loops, conditional statements, print operations, general mathematics, and array manipulations.
+                          </p><p>
+                          Voicoder was conceived with dual objectives: firstly, to empower individuals with typing disabilities by enabling voice-based coding, and secondly, to make learning programming more engaging and accessible for children. By verbally interacting with the Google Assistant, users can perform complex coding operations, and the system further enhances the learning experience by vocalizing the outcomes with a machine-generated voice.
+                      </p>
                   </div>
 
-
-
-
-                <div class="isotope-item" data-type="photography">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/WDC2.jpeg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/WDC2.jpeg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Washington D.C.</h4>
-                      <span>Tidal Basin</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="photography">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/goat.jpeg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/goat.jpeg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-					  <h4>China</h4>
-                      <span></span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="photography">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/PR2.jpeg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/PR2.jpeg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Michigan</h4>
-                      <span>Pictured Rock National Lakeshore</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="photography">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/SantaMonica.jpeg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/SantaMonica.jpeg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>California</h4>
-                      <span>Santa Monica</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-
-
-
-
-                <div class="isotope-item" data-type="bouldering">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/B1.jpeg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/B1.jpeg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Madison, WI</h4>
-                      <span>Bouldering Downtown</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-
-                <div class="isotope-item" data-type="bouldering">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/B3.jpeg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/B3.jpeg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Madison, WI</h4>
-                      <span>Bouldering Downtown</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-
-
+                  <div class="project-links">
+                    <p>
+                        <strong>Links:</strong>
+                          <a href="https://github.com/HuanranLi/Projects/blob/master/dialogflowFulfillment.zip" target="_blank">Code</a>
+                    </p>
+                  </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-me" data-section="section5">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Contact Me</h2>
-            <div class="line-dec"></div>
+            </ul>
+        </section>
 
 
 
-            <span
-              ><b>Email (Preferred):</b> <a href="mailto:hli488@wisc.edu">hli488@wisc.edu</a>
-				</br> <b>Office Location:</b> <a href="https://goo.gl/maps/U4gSPNnjGTB8PWdr7"> 330 North Orchard Street, Room 2115D-2, Madison WI 53715 </a>
-				</br> <b>School's Website:</b> <a href="https://wid.wisc.edu/people/huanran-li/">https://wid.wisc.edu/people/huanran-li/</a>
-              </span
-            >
+        <hr>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>I am always open to exploring collaboration opportunities. If you're interested in discussing potential collaborations or projects, please don't hesitate to get in touch.</p>
+            <p><strong>Email:</strong> <a href="mailto:hli488@wisc.edu">hli488@wisc.edu</a></p>
+        </section>
 
-			<img src="assets/images/me.jpg" alt="">
-          </div>
-		</div>
-      </section>
     </div>
 
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script>
-      //according to loftblog tut
-      $(".main-menu li:first").addClass("active");
-
-      var showSection = function showSection(section, isAnimate) {
-        var direction = section.replace(/#/, ""),
-          reqSection = $(".section").filter(
-            '[data-section="' + direction + '"]'
-          ),
-          reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-          $("body, html").animate(
-            {
-              scrollTop: reqSectionPos
-            },
-            800
-          );
-        } else {
-          $("body, html").scrollTop(reqSectionPos);
-        }
-      };
-
-      var checkSection = function checkSection() {
-        $(".section").each(function() {
-          var $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var currentId = $this.data("section"),
-              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-            reqLink
-              .closest("li")
-              .addClass("active")
-              .siblings()
-              .removeClass("active");
-          }
-        });
-      };
-
-      $(".main-menu").on("click", "a", function(e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-      });
-
-      $(window).scroll(function() {
-        checkSection();
-      });
-    </script>
-  </body>
+    <footer>
+        <p>© 2024 Huanran Li</p>
+    </footer>
+</body>
 </html>
